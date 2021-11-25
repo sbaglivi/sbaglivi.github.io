@@ -1,0 +1,131 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('Oswald-Regular.ttf');
+    font-style: normal;
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('Oswald-Bold.ttf');
+    font-style: normal;
+    font-weight: 700;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #eeeee4;
+    color: #13131e;
+    font-family: 'Oswald';
+    font-size: 24px;
+}
+.slides {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    scroll-snap-align: center;
+}
+
+#presentation {
+    font-size: 2em;
+}
+.navbar {
+    position: fixed;
+    background-color: #13131e;
+    top:0% vh;
+    left:5%vw;
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    /* border-bottom: 1px solid #eeeee4;
+     z-index: -1; */
+}
+ul {
+    display: inline;
+    text-decoration: none;
+}
+li {
+    display: inline;
+}
+.navbar a {
+    text-decoration: none;
+    padding-left: 20px;
+    color: #eeeee4;
+}
+.slide a, .slide a:visited {
+    color: #13131e;
+}
+.link-container {
+    width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #13131e;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.logo {
+    height: 20px;
+}
+#works {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.works-row {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.single-work {
+    height: 200px;
+    width: 40%; 
+    background: repeating-linear-gradient(
+    45deg,
+    #54545e 0px,
+    #54545e 20px,
+    #eeeee4 20px,
+    #eeeee4 40px
+  );
+    border: 1px solid #13131e;
+}
+
+@media only screen and (max-width: 450px) {
+    body {
+        font-size: 20px;
+    }
+  .link-container {
+    width: 100%;
+  }
+}
