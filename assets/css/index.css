@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Oswald';
-    src: url('Oswald-Regular.ttf');
+    src: url('../fonts/Oswald-Regular.ttf');
     font-style: normal;
     font-weight: 300;
 }
 @font-face {
     font-family: 'Oswald';
-    src: url('Oswald-Bold.ttf');
+    src: url('../fonts/Oswald-Bold.ttf');
     font-style: normal;
     font-weight: 700;
 }
@@ -128,4 +128,17 @@ li {
   .link-container {
     width: 100%;
   }
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#contact-form input {
+    margin-bottom: 20px;
+}
+
+textarea {
+    margin-bottom: 20px;
 }
