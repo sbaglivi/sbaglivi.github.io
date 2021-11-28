@@ -1,0 +1,28 @@
+body > .container-fluid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 90%;
+}
+
+.container-fluid h3 {
+  margin: 20px 0px 20px 0px;
+}
+.works-row {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+.single-work {
+  height: 200px;
+  width: 40%;
+  background: repeating-linear-gradient(
+    45deg,
+    #54545e 0px,
+    #54545e 20px,
+    #eeeee4 20px,
+    #eeeee4 40px
+  );
+  border: 1px solid #13131e;
+}

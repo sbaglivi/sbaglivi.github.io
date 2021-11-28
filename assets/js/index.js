@@ -13,6 +13,8 @@ function sendEmail(event){
     emailjs.sendForm('service_non92qv', 'template_jr2x0hh', this)
                     .then(function() {
                         console.log('SUCCESS!');
+                        let contactSlide = document.getElementById("contact");
+                        contactSlide.innerHTML = "<p>Your message has been successfully sent!</p><br/><p>I hope you have a wonderful day!</p>";
                     }, function(error) {
                         console.log('FAILED...', error);
                     });

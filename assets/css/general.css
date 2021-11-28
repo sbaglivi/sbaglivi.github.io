@@ -1,0 +1,119 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-Regular.ttf");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/Oswald-Bold.ttf");
+  font-style: normal;
+  font-weight: 700;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Oswald";
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+}
+.nav-links {
+  width: 60%;
+}
+.navbar li {
+  font-size: 20px;
+}
+html,
+body {
+  height: 100%;
+}
+a,
+a:visited {
+  color: #212529;
+}
+.nav-link:hover {
+  color: white !important;
+}
+@media only screen and (max-width: 992px) {
+  .nav-links {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .first-link::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0%;
+    left: 50%;
+    border-bottom: 2px solid white;
+    animation: underline-pulse 10s infinite ease;
+  }
+  .second-link::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0%;
+    left: 50%;
+    border-bottom: 2px solid white;
+    animation: underline-pulse 10s 2s infinite ease;
+  }
+  .third-link::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0%;
+    left: 50%;
+    border-bottom: 2px solid white;
+    animation: underline-pulse 10s 4s infinite ease;
+  }
+  .fourth-link::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 0%;
+    left: 50%;
+    border-bottom: 2px solid white;
+    animation: underline-pulse 10s 6s infinite ease;
+  }
+  @keyframes underline-pulse {
+    20% {
+      left: 50%;
+      width: 0%;
+    }
+    10% {
+      left: 0%;
+      width: 100%;
+    }
+  }
+}
+
+/*
+.first-link {
+  border-bottom: 2px solid transparent;
+  animation: border-pulse 8s 2s infinite ease;
+}
+.second-link {
+  border-bottom: 2px solid transparent;
+  animation: border-pulse 8s 4s infinite ease;
+}
+.third-link {
+  border-bottom: 2px solid transparent;
+  animation: border-pulse 8s 6s infinite ease;
+}
+.fourth-link {
+  border-bottom: 2px solid transparent;
+  animation: border-pulse 8s 8s infinite ease;
+}
+@keyframes border-pulse {
+  12.5% {
+    border-bottom-color: white;
+  }
+  25% {
+    border-bottom-color: transparent;
+  }
+}
+*/

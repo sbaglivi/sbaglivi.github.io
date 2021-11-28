@@ -1,144 +1,92 @@
-@font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-Regular.ttf');
-    font-style: normal;
-    font-weight: 300;
+body,
+html {
+  height: 100%;
 }
-@font-face {
-    font-family: 'Oswald';
-    src: url('../fonts/Oswald-Bold.ttf');
-    font-style: normal;
-    font-weight: 700;
+.presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
 }
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+h1 {
+  font-size: 3em;
 }
-body {
-    background-color: #eeeee4;
-    color: #13131e;
-    font-family: 'Oswald';
-    font-size: 24px;
+#first-row {
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  border-right: 2px solid transparent;
+  animation: typing 2s steps(14, end), blinking-caret 0.5s 4 steps(1, end);
 }
-.slides {
-    scroll-snap-type: y mandatory;
-    height: 100vh;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
+#second-row {
+  overflow: hidden;
+  margin: 0 auto;
+  white-space: nowrap;
+  width: 0%;
+  border-right: 2px solid transparent;
+  animation: typing 2s 2.5s forwards steps(14, end),
+    blinking-caret 0.5s 2s 7 steps(1, end);
 }
-
-.slide {
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 60%;
-    height: 100%;
-    scroll-snap-align: center;
+.text-container {
+  width: fit-content;
 }
-
-#presentation {
-    font-size: 2em;
-}
-.navbar {
-    position: fixed;
-    background-color: #13131e;
-    top:0% vh;
-    left:5%vw;
-    display: flex;
-    justify-content: start;
-    width: 100%;
-    /* border-bottom: 1px solid #eeeee4;
-     z-index: -1; */
-}
-ul {
-    display: inline;
-    text-decoration: none;
-}
-li {
-    display: inline;
-}
-.navbar a {
-    text-decoration: none;
-    padding-left: 20px;
-    color: #eeeee4;
-}
-.slide a, .slide a:visited {
-    color: #13131e;
-}
-.link-container {
-    width: 70%;
-    padding: 10px;
-    margin: 0 auto;
-}
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #13131e;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-.logo {
-    height: 20px;
-}
-#works {
-    padding-top: 0px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.works-row {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    display: flex;
-    justify-content: space-around;
-}
-.single-work {
-    height: 200px;
-    width: 40%; 
-    background: repeating-linear-gradient(
-    45deg,
-    #54545e 0px,
-    #54545e 20px,
-    #eeeee4 20px,
-    #eeeee4 40px
-  );
-    border: 1px solid #13131e;
-}
-
-@media only screen and (max-width: 450px) {
-    body {
-        font-size: 20px;
-    }
-  .link-container {
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
     width: 100%;
   }
 }
-
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+/* posso farlo durare un tot di secondi totali ma ripetersi in un ciclo piu' breve di quella durata? */
+@keyframes blinking-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
-#contact-form input {
-    margin-bottom: 20px;
+.link-container li {
+  display: inline;
 }
-
-textarea {
-    margin-bottom: 20px;
+/*
+.link-container a {
+  padding: 10px;
+  border: 1px solid black;
+  background-color: grey;
+  color: white;
+  text-decoration: none;
 }
+*/
+/*
+.first-link {
+  animation: appear 1s 1s forwards steps(40, end);
+  opacity: 0%;
+}
+.second-link {
+  animation: appear 1s 3s forwards steps(40, end);
+  opacity: 0%;
+}
+.third-link {
+  animation: appear 1s 5s forwards steps(40, end);
+  opacity: 0%;
+}
+.fourth-link {
+  animation: appear 1s 7s forwards steps(40, end);
+  opacity: 0%;
+}
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+.logo {
+  height: 20px;
+}
+*/

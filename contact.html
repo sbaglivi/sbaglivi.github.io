@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/general.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <link
+      rel="icon"
+      href="assets/images/white_triangle.png"
+      type="image/x-icon"
+    />
+    <title>Simone Baglivi - Contact</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript" src="assets/js/index.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid nav-links">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link first-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item second-link">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item third-link">
+              <a class="nav-link" href="skills.html">Skills</a>
+            </li>
+            <li class="nav-item fourth-link">
+              <a class="nav-link" href="works.html">Works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="contact.html"
+                >Contact me</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <h1>Contact me</h1>
+      <form id="contact-form">
+        <div class="mb-3">
+          <label for="user_name" class="form-label">Your name:</label>
+          <input type="text" class="form-control" name="user_name" />
+        </div>
+        <div class="mb-3">
+          <label for="user_email" class="form-label">Your email:</label>
+          <input type="email" class="form-control" name="user_email" />
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Your message:</label>
+          <textarea
+            name="message"
+            id=""
+            cols="30"
+            class="form-control"
+            rows="6"
+          ></textarea>
+        </div>
+        <input type="submit" class="btn btn-lg btn-dark" value="Send" />
+      </form>
+    </div>
+  </body>
+</html>
